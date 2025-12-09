@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <title>Shelli’s Socials – LinkedIn™ Coaching</title>
+<!-- Social preview image -->
+<meta property="og:title" content="Shelli’s Socials – LinkedIn™ Coaching">
+<meta property="og:description" content="Helping executives, founders, and solopreneurs grow their brand on LinkedIn™.">
+<meta property="og:image" content="shelli-photo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shellionsocial.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts – approximated to match your branding sample -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Brand palette – tweak these to match your exact swatches */
+      --green-darkest: #003c3a;
+      --green-darker: #004744;
+      --green-dark: #005c52;
+      --green-mid: #0f7a6d;
+      --green-light: #e6f3ef;
+      --yellow: #e7f58b;
+      --yellow-soft: #f3f8c3;
+      --offwhite: #f7fbf9;
+      --text-main: #082820;
+      --text-muted: #49605d;
+      --card-shadow: 0 22px 45px rgba(0, 0, 0, 0.14);
+      --radius-lg: 28px;
+      --radius-md: 20px;
+      --transition-fast: 0.2s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--offwhite);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout helpers */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-kicker {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      max-width: 640px;
+      margin: 0 auto 26px auto;
+    }
+
+    /* THE MESSAGE heading – flush left */
+    #message .section-title {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    p.muted {
+      color: var(--text-muted);
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    /* Header & nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: var(--green-darker);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .logo-wrap img {
+      height: 54px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      color: var(--yellow);
+      white-space: nowrap;
+    }
+
+    .brand-text-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .brand-text-subtitle {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--yellow);
+      font-weight: 400; /* not bold */
+      opacity: 0.92;
+      position: relative;
+      padding-bottom: 2px;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--yellow);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      border-radius: 999px;
+      border: 1px solid var(--yellow);
+      padding: 6px 14px;
+      font-size: 13px;
+    }
+
+    /* Hero */
+    /* HERO (updated per brand palette and layout) */
+.hero {
+  background: radial-gradient(circle at top left, #0f7a6d 0, #0b6459 45%, #004744 100%);
+  color: #ffffff;
+  padding: 80px 24px 100px 24px;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+
+  /* make more space between text and photo */
+  gap: 60px;
+
+  align-items: center;
+}
+
+.hero-copy {
+  /* widen the text block slightly for fewer line breaks */
+  max-width: 680px;
+}
+
+.hero-photo-inner img {
+  width: 100%;
+  max-width: 280px; /* slightly smaller image */
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+
+/* Headline and colors */
+.hero-title {
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.highlight-fomo {
+  color: #e4f6a7;
+}
+
+.hero-intro {
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.95;
+  margin-bottom: 12px;
+}
+
+.hero-fix {
+  color: #e4f6a7;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Adjust photo size (smaller but keep border & shadow) */
+.hero-photo-wrap {
+  background: radial-gradient(circle at top right, #0b8d78 0, #004744 60%, #002b2b 100%);
+  padding: 18px;
+  border-radius: 40px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 340px;
+  margin-left: auto;
+}
+
+.hero-photo-inner {
+  border-radius: 32px;
+  padding: 8px;
+  background-color: var(--yellow);
+}
+
+.hero-photo-inner img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+    .hero {
+      background: radial-gradient(circle at top left, #0f7a6d 0, #0b6459 45%, #004744 100%);
+      color: #fff;
+      padding: 60px 24px 90px 24px;
+    }
+
+    .hero-top-links {
+      max-width: 1200px;
+      margin: 0 auto 18px auto;
+      text-align: right;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-top-links a {
+      color: var(--yellow-soft);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-left: 14px;
+      font-weight: 600;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+
+  /* Moves it closer to the top */
+  margin-top: 10px;
+
+  /* Adds more space below it */
+  margin-bottom: 40px;
+}
+
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--yellow-soft), var(--yellow));
+      color: #003c3a;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 22px;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .hero-actions {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 22px;
+      border-radius: 999px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        background var(--transition-fast), color var(--transition-fast);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: #003c3a;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--yellow-soft);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(0, 0, 0, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .hero-photo-wrap {
+      background: radial-gradient(circle at top right, #0b8d78 0, #004744 60%, #002b2b 100%);
+      padding: 22px;
+      border-radius: 40px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-photo-inner {
+      border-radius: 32px;
+      padding: 8px;
+       background-color: var(--yellow);
+}
+    .hero-photo-inner img {
+      border-radius: 28px;
+      object-fit: cover;
+    }
+
+    /* The Message */
+    #message .section-inner {
+      text-align: left;
+      max-width: 780px;
+    }
+
+    #message .section-title {
+      text-align: left;
+    }
+
+    #message .section-heading {
+      text-align: left;
+    }
+
+    #message p {
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 16px;
+    }
+
+    /* The Offer */
+    #offer {
+      background: #ffffff;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--card-shadow);
+      padding: 30px 26px 28px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pricing-label {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .pricing-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .pricing-list {
+      list-style: disc;
+      padding-left: 18px;
+      margin: 10px 0 18px 0;
+      color: var(--text-main);
+      font-size: 14px;
+    }
+
+    .pricing-price {
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-top: 10px;
+    }
+
+    .pricing-footnote {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 18px;
+    }
+
+    /* The Framework */
+    #framework {
+      background: var(--green-light);
+    }
+
+    .framework-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 30px;
+    }
+
+    .framework-column {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+      text-align: left;
+    }
+
+    .framework-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--green-dark);
+    }
+
+    .framework-list {
+      list-style: disc;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    /* The Buzz – testimonials slider */
+    #buzz {
+      background: #ffffff;
+    }
+
+    .testimonial-shell {
+      max-width: 900px;
+      margin: 26px auto 0 auto;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--card-shadow);
+      padding: 34px 34px 30px 34px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+    }
+
+    .testimonial {
+      opacity: 0;
+      position: absolute;
+      inset: 0;
+      padding: 34px 34px 30px 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .testimonial.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    .testimonial-quote {
+      font-size: 18px;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .testimonial-role {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .testimonial-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .testimonial-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #d5ddd6;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .testimonial-dot.active {
+      background: var(--green-dark);
+      transform: scale(1.2);
+    }
+
+    /* The Why – image on LEFT, text on RIGHT */
+    #why {
+      background: var(--green-light);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+      gap: 40px;
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .why-photo-wrap {
+      justify-self: center;
+      background: radial-gradient(circle at top left, #0b8d78 0, #004744 60%, #002b2b 100%);
+      padding: 22px;
+      border-radius: 40px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .why-photo-inner {
+      border-radius: 32px;
+      padding: 8px;
+      background: linear-gradient(135deg, var(--yellow-soft), #ffffff);
+    }
+
+    .why-photo-inner img {
+      border-radius: 28px;
+      object-fit: cover;
+    }
+
+    .why-copy {
+      text-align: left;
+    }
+
+    .why-copy p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .why-copy p {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+/* Highlight key lines in "The Why" */
+.why-copy .why-emphasis {
+  font-size: 18px;          /* slightly larger */
+  font-weight: 700;         /* bolder */
+  color: var(--green-dark); /* uses your brand green for subtle emphasis */
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+
+    /* Contact */
+    #contact {
+      background: #ffffff;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+      margin-top: 26px;
+    }
+
+    .contact-copy {
+      font-size: 15px;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+    }
+
+    .form-full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: var(--text-muted);
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #c8d6d0;
+      padding: 9px 10px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--green-mid);
+      box-shadow: 0 0 0 2px rgba(15, 122, 109, 0.15);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      margin-top: 8px;
+      grid-column: 1 / -1;
+    }
+
+    .contact-photo-wrap {
+      background: radial-gradient(circle at top right, #0b8d78 0, #004744 60%, #002b2b 100%);
+      padding: 22px;
+      border-radius: 40px;
+      box-shadow: var(--card-shadow);
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-photo-inner {
+      border-radius: 32px;
+      padding: 8px;
+      background: linear-gradient(135deg, var(--yellow-soft), #ffffff);
+    }
+
+    .contact-photo-inner img {
+      border-radius: 28px;
+      object-fit: cover;
+    }
+
+    .cta-note {
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .external-links {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .external-links a {
+      color: var(--green-dark);
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      margin-right: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--green-darker);
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 12px;
+      padding: 20px 24px 28px 24px;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: var(--yellow);
+      margin-left: 12px;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-inner,
+      .pricing-grid,
+      .framework-grid,
+      .why-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-inner {
+        text-align: left;
+      }
+
+      .hero-photo-wrap {
+        max-width: 380px;
+        justify-self: center;
+      }
+
+      .why-photo-wrap,
+      .contact-photo-wrap {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 64px 18px;
+      }
+
+      .hero {
+        padding: 80px 18px 70px 18px;
+      }
+
+      .hero-title {
+        font-size: 32px;
+      }
+
+      .hero-subtitle {
+        font-size: 22px;
+      }
+
+      .testimonial-shell {
+        padding: 26px 20px 24px 20px;
+      }
+
+      .testimonial {
+        padding: 26px 20px 24px 20px;
+      }
+
+      form {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+#contact-cta {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+#contact-cta h2 {
+  margin-bottom: 0.5rem;
+}
+
+#contact-cta p {
+  margin-bottom: 1.25rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+
+  /* gradient to match the picture border */
+  background: linear-gradient(135deg, #007366, #004440);
+
+  /* bold yellow text */
+  color: #E7F58B;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.btn-primary:hover {
+  opacity: 0.92;
+}
+
+.socials {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.socials .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #E7F58B; /* your yellow */
+  color: #004440;       /* your dark green */
+  text-decoration: none;
+}
+
+.socials .icon:hover {
+  filter: brightness(0.95);
+}
+#contact-cta {
+  padding: 3rem 1.5rem 4rem;
+}
+
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-left {
+  flex: 1 1 340px;
+}
+
+.contact-right {
+  flex: 0 0 340px;
+  display: flex;
+  justify-content: center;
+}
+
+.photo-wrapper {
+  background: linear-gradient(135deg, #007366, #004440);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.photo-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+}
+/* BUTTON STYLE — FINAL VERSION */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 36px;     /* You may not have seen this before — this is correct */
+  background: linear-gradient(135deg, #0F7A6D, #004440);
+  color: #E7F58B;         /* your yellow */
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  transition: all 0.3s ease;
+}
+/* Add breathing room under the button */
+.contact-left .btn-primary {
+  margin-bottom: 28px;
+}
+/* Contact photo border */
+.contact-photo-wrap,
+.photo-wrapper {
+  background: radial-gradient(circle at top right,
+    #0b8d78 0,
+    #004744 60%,
+    #002b2b 100%);
+  padding: 22px;
+  border-radius: 40px;
+  box-shadow: var(--card-shadow);
+}
+
+.contact-photo-inner,
+.photo-wrapper img {
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--yellow-soft), #ffffff);
+  padding: 8px;
+}
+.footer-left-main {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.footer-left-extra {
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+footer {
+  padding: 30px 20px;
+  background-color: #003c3a;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #e7f58b;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+
+/* END OF NEW FOOTER CSS */
+/* ====== FOOTER LAYOUT ====== */
+
+footer {
+  background-color: #003c3a;   /* matches your existing footer color */
+  color: #ffffff;
+  font-size: 14px;
+  padding: 24px 20px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;             /* so it behaves nicely on mobile */
+}
+
+/* Left block: copyright + address */
+.footer-left {
+  min-width: 220px;
+}
+
+.footer-left-main {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.footer-left-extra {
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* Middle legal text */
+.footer-legal {
+  flex: 1;
+  max-width: 640px;
+  line-height: 1.4;
+}
+
+/* Right links */
+.footer-links {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.footer-links a {
+  color: #e7f58b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* ====== END FOOTER LAYOUT ====== */
+
+  </style>
+
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="nav-bar">
+      <div class="nav-left">
+        <div class="logo-wrap">
+          <a href="#home">
+            <img src="https://www.dropbox.com/scl/fi/jqgaq037dnwkgvgfpalxd/Shelli-s-Socials-branded-Yellow-darker-green.png?rlkey=ig0het7dxjqsjfyqmd82be728&st=c9wbrgm9&dl=0&raw=1"
+                 alt="Shelli’s Socials logo" />
+          </a>
+        </div>
+        <div class="brand-text">
+          <div class="brand-text-title">Shelli’s Socials</div>
+          <div class="brand-text-subtitle">LinkedIn™ Coaching · Simplified Social Media</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#message">The Message</a>
+        <a href="#offer">The Offer</a>
+        <a href="#framework">The Framework</a>
+        <a href="#buzz">The Buzz</a>
+        <a href="#why">The Why</a>
+        <a href="https://saffron-soybean-y6tj.squarespace.com/contact"
+   target="_blank"
+   rel="noopener noreferrer">
+  Contact
+</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / HOME -->
+<!-- HERO / HOME -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <!-- LEFT SIDE COPY -->
+    <div class="hero-copy">
+      <div class="hero-tagline">
+        Power your future with LinkedIn™
+      </div>
+
+      <h1 class="hero-title">
+        Got a bad case of <span class="highlight-fomo">FOMO</span> seeing everyone else monetize their expertise?
+      </h1>
+
+      <p class="hero-intro">
+        You’ve got the knowledge. You have the experience. <strong>You just don’t know how to bring it all together to make it work for you.</strong> 
+      </p>
+
+      <p class="hero-fix">
+        <strong>Let’s fix that.</strong>
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE PHOTO -->
+    <div class="hero-photo-wrap" aria-hidden="false">
+      <div class="hero-photo-inner">
+        <img
+          src="https://www.dropbox.com/scl/fi/j9b15cux3wncuz659tzaa/Shelli-JPG.jpg?rlkey=46et7e48fampj4fxkreyq2ode&st=el404a92&raw=1"
+          alt="Shelli Spence photo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- THE MESSAGE -->
+  <section id="message">
+    <div class="section-inner">
+      <div class="section-heading">The Message</div>
+      <h2 class="section-title">Build Something That’s Yours</h2>
+
+      <p>For the first time in history, you can turn your lived experience into a professional life shaped on your own terms by showing up online.
+      </p>
+
+      <p>
+        You don’t have to compete with the 20-something influencers or the broadcast bros to scale your own powerful presence on social media.
+      </p>
+      <p><strong>Building your brand</strong> is about turning hard-won wisdom into relatable authority: showing the world you know your stuff.
+      </p>
+
+      <p>
+        Someone out there needs to hear your story, benefit from your services, and learn from your insight.
+      </p>
+            
+      <p>
+        <strong>And I’m here to help you get your message to that someone.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- THE OFFER -->
+  <section id="offer">
+    <div class="section-inner">
+      <div class="section-heading">The Offer</div>
+      <h2 class="section-title">Inbound Leads Made Simple System</h2>
+      <p class="muted" style="text-align:center; max-width:760px; margin:0 auto;">
+      My OPTIMIZE → ATTRACT → CONVERT framework was built for professionals like you: a clear, step-by-step system designed to start bringing in warm leads within 30 days.
+      </p>
+      <p class="muted" style="text-align:center; max-width:760px; margin:0 auto;">Below are your coaching options to make that happen.
+      </p>
+
+      <div class="pricing-grid">
+        <!-- Group Cohort -->
+        <article class="pricing-card">
+          <div>
+            <div class="pricing-label">Group Cohort</div>
+            <h3 class="pricing-title">Small&nbsp;Group&nbsp;Coaching&nbsp;</h3>
+            <p class="muted">Six hour-long sessions • Live on Zoom</p>
+            <ul class="pricing-list">
+              <li>Learn the full Optimize → Attract → Convert framework.</li>
+              <li>Transform your profile into a 24/7 billboard.</li>
+              <li>Commenting and content strategy that draws in your ICP naturally.</li>
+              <li>Max group size is 6 people.</li>
+            </ul>
+          </div>
+          <div class="pricing-price">$800</div>
+        </article>
+
+        <!-- Premium 1:1 -->
+        <article class="pricing-card">
+          <div>
+            <div class="pricing-label">Premium</div>
+            <h3 class="pricing-title">Private Coaching</h3>
+            <p class="muted">Four 50-minute Zoom sessions</p>
+            <ul class="pricing-list">
+              <li>Learn the full Optimize → Attract → Convert framework.</li>
+              <li>Messaging and positioning tuned to your goals and industry.</li>
+              <li>1:1 sessions with customized instruction.</li>
+              </ul>
+          </div>
+          <div class="pricing-price">$1,800</div>
+        </article>
+
+        <!-- Platinum -->
+        <article class="pricing-card">
+          <div>
+            <div class="pricing-label">Platinum</div>
+            <h3 class="pricing-title">1:1 + Ongoing Support</h3>
+            <p class="muted">Eight 50-minute sessions</p>
+            <ul class="pricing-list">
+              <li>Everything in Premium</li>
+              <li>Detailed profile, post review, and strategy sessions.</li>
+              <li>DM support while you implement &amp; build momentum in real time.</li>
+            </ul>
+          </div>
+          <div class="pricing-price">$3,300</div>
+        </article>
+      </div>
+
+      <p class="pricing-footnote">
+        Need a one-time deep dive conversation? Strategy Intensives are available: <strong class="highlight-strong">$600</strong> for the first hour,
+        <strong class="highlight-strong">$300</strong> for each follow-up hour.
+      </p>
+    </div>
+  </section>
+
+  <!-- THE FRAMEWORK -->
+  <section id="framework">
+    <div class="section-inner">
+      <div class="section-heading">The Framework</div>
+      <h2 class="section-title">What You’ll Learn</h2>
+      <p class="muted" style="text-align:center; max-width:780px; margin:0 auto;">
+        A clear system for attracting the right visitors to your profile.
+      </p>
+      <p class="muted" style="text-align:center; max-width:780px; margin:0 auto;">
+        With an optimized profile in place, those views can convert into booked calls.
+      </p>
+
+      <div class="framework-grid">
+        <!-- Optimize -->
+        <div class="framework-column">
+          <h3 class="framework-title">OPTIMIZE · Your Profile</h3>
+          <ul class="framework-list">
+            <li>Clarify who you serve and what you help them achieve.</li>
+            <li>Craft an About section that speaks directly to your ICP.</li>
+            <li>Lure visitors to your profile with a refined headline.</li>
+          </ul>
+        </div>
+
+        <!-- Attract -->
+        <div class="framework-column">
+          <h3 class="framework-title">ATTRACT · Your People</h3>
+          <ul class="framework-list">
+            <li>Attract visitors to your profile with strategic commenting and content.</li>
+            <li>Write posts that sound like you and speak to their real problems.</li>
+            <li>Use simple engagement habits so you’re visible without being online all day.</li>
+          </ul>
+        </div>
+
+        <!-- Convert -->
+        <div class="framework-column">
+          <h3 class="framework-title">CONVERT · Your Opportunities</h3>
+          <ul class="framework-list">
+            <li>Design soft calls-to-action that lead naturally to conversations.</li>
+            <li>Identify sales signals.</li>
+            <li>Interpret the data that matters, and what to do with it.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BUZZ -->
+  <section id="buzz">
+    <div class="section-inner">
+      <div class="section-heading">The Buzz</div>
+      <h2 class="section-title">What pros like you are saying...</h2>
+
+      <div class="testimonial-shell" aria-live="polite">
+        <!-- Americo -->
+        <figure class="testimonial active">
+          <blockquote class="testimonial-quote">
+            “One thing I like about Shelli’s training; she always includes a clear ‘why’ behind the recommended practice.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Americo Da Costa</div>
+            <div class="testimonial-role">
+              Livestream &amp; On-Demand Event Specialist · LinkedIn™ Strategist
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Rich -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “I’ve worked alongside Shelli for the past two years and have seen firsthand how talented she is at helping people clarify their voice, build their brand, and show up consistently in a way that connects.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Rich Swerbinsky</div>
+            <div class="testimonial-role">
+              Business Consultant &amp; Career Coach · Executive Director, Ohio MBA
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Andre -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “Your insights highlight exactly the kind of strategic adjustments we should all be prioritizing.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Andre Waltz</div>
+            <div class="testimonial-role">
+              Technical Sales Representative, Pinnacle Agencies Ltd.
+            </div>
+          </figcaption>
+        </figure>
+
+                <!-- Jasmin -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “This lady gets it.  She really does.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Jasmin Alić</div>
+            <div class="testimonial-role">
+              Brand and Business Strategist, Founder and CEO Link UP.
+            </div>
+          </figcaption>
+        </figure>
+        <!-- Laura -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “I walked away with practical tools, clear direction, and a lot more confidence in how I show up online. Highly recommend her to anyone looking to elevate their LinkedIn presence.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Laura Faro</div>
+            <div class="testimonial-role">
+              Leadership Trainer &amp; Workshop Facilitator
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- David -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “This process is fantastic. I will definitely implement this format. It makes so much sense to have such an intentional flow. Thank you, Shelli, for this great tip.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">David Cause</div>
+            <div class="testimonial-role">
+              Graphic design &amp; illustration services
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Dr. Reggie -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “Shell, your expertise in that space is so amazing. Thank you for sharing high quality content that is so helpful.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Dr. Reggie Thomas</div>
+            <div class="testimonial-role">
+              Keynote Speaker &amp; Training Facilitator · 2x Bestselling Author
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Laura -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “Working with Shelli Spence was such a great experience. She’s insightful, supportive, and really knows how to bring out your authentic voice on LinkedIn.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Laura Faro</div>
+            <div class="testimonial-role">
+              Leadership Trainer &amp; Workshop Facilitator
+            </div>
+          </figcaption>
+        </figure>
+
+        <!-- Rich -->
+        <figure class="testimonial">
+          <blockquote class="testimonial-quote">
+            “If you’re trying to grow your brand, sharpen your message, or just stop overthinking every post, Shelli’s the kind of person you want guiding the way.”
+          </blockquote>
+          <figcaption>
+            <div class="testimonial-name">Rich Swerbinsky</div>
+            <div class="testimonial-role">
+              Business Consultant &amp; Career Coach · Executive Director, Ohio MBA
+            </div>
+          </figcaption>
+        </figure>
+
+        <div class="testimonial-dots" aria-hidden="true">
+          <div class="testimonial-dot active"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+          <div class="testimonial-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE WHY (image on LEFT) -->
+  <section id="why">
+    <div class="section-inner">
+      <div class="section-heading">The Why</div>
+      <h2 class="section-title">Why I built Shelli’s Socials</h2>
+
+      <div class="why-grid">
+        <div class="why-photo-wrap">
+          <div class="why-photo-inner">
+            <img src="https://www.dropbox.com/scl/fi/hpw68dtmz8e97fu3mq1he/Shelli-for-website-No-background.jpg?rlkey=kmddeepguyvcinfla47ox3gp3&st=hmaosvzs&raw=1"
+                 alt="Shelli Spence smiling" />
+          </div>
+        </div>
+
+   <div class="why-copy">
+  <p>When I first showed up on LinkedIn™, I was a C-suite mortgage executive watching my industry implode around me.</p>
+
+  <p>My employer shut their doors. Mergers. Acquisitions. Overnight, there was nothing out there.</p>
+
+  <p>If I wanted to stay relevant, I had to adapt.</p>
+
+  <p class="why-emphasis">And adapt I did.</p>
+
+  <p>At first, I was frustrated. I saw people killing it while I felt like a failure.</p>
+
+  <p class="why-emphasis">Sound familiar?</p>
+
+  <p>But over time I figured it out: I learned the system, built a plan, and executed it.</p>
+
+  <p>Now, I geek out about LinkedIn™ so you don’t have to.</p>
+
+  <p>I help executives, solopreneurs, and sales pros master their brand through a clear, repeatable framework.</p>
+
+  <p class="why-emphasis">So why did I start Shelli’s Socials?</p>
+
+  <p>Because I want you to experience the agency that comes from building something that’s yours.</p>
+</div>
+         
+  </section>
+
+  <!-- CONTACT -->
+  
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-heading">Contact Me</div>
+    <h2 class="section-title">Let’s put LinkedIn™ to work for you.</h2>
+
+    <div class="contact-layout">
+
+      <!-- LEFT SIDE -->
+      <div class="contact-left">
+
+        <h2>Ready to learn more?</h2>
+        <p>Click here and I’ll be in touch shortly.</p>
+
+        <!-- Squarespace Contact Page -->
+        <a 
+          href="https://saffron-soybean-y6tj.squarespace.com/contact" 
+          class="btn-primary"
+          target="_blank"
+          rel="noopener"
+        >
+          SECURE CONTACT FORM
+        </a>
+
+        <!-- Connect Text -->
+        <p class="connect-copy">
+          Let’s connect too!  
+          Click on the logo buttons below to find me on LinkedIn™ or subscribe to my Substack.
+
+        <!-- SOCIAL ICONS -->
+        <div class="socials">
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/shellikspence/"
+             target="_blank"
+             rel="noopener"
+             class="icon">
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 
+                       1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8 8.5h3.8v1.98h.05
+                       c.53-.95 1.83-1.98 3.77-1.98 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.47
+                       c0-1.54-.03-3.52-2.15-3.52-2.15 0-2.48 1.68-2.48 3.41V23H8V8.5z"
+                    fill="currentColor"/>
+            </svg>
+          </a>
+
+          <!-- Substack -->
+          <a href="https://substack.com/@shellikspence?utm_source=user-menu"
+             target="_blank"
+             rel="noopener"
+             class="icon">
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <rect x="3" y="5" width="18" height="3" rx="1" fill="currentColor"/>
+              <rect x="3" y="10" width="18" height="3" rx="1" fill="currentColor"/>
+              <rect x="7" y="15" width="10" height="6" rx="1" fill="currentColor"/>
+            </svg>
+          </a>
+
+        </div><!-- socials -->
+
+      </div><!-- contact-left -->
+
+      <!-- RIGHT SIDE — PHOTO -->
+      <div class="contact-right">
+        <div class="photo-wrapper">
+          <img 
+            src="https://www.dropbox.com/scl/fi/8gdecbilu7i1m85w59jaf/shelli_ai_street_2025_alpanaaras5-POSTING-7.27.jpeg?rlkey=gk3n0e6ukonrudm6db1t4ehwl&st=e3a3ehay&raw=1"
+            alt="Shelli Spence">
+        </div>
+      </div>
+
+    </div><!-- contact-layout -->
+  </div><!-- section-inner -->
+</section>
+
+
+<!-- FOOTER / LEGAL -->
+<footer>
+  <div class="footer-inner">
+
+    <!-- LEFT: COPYRIGHT + LOCATION -->
+    <div class="footer-left">
+      <div class="footer-left-main">
+        © <span id="year"></span> <strong>Shelli’s Socials</strong>. All rights reserved.
+      </div>
+      <div class="footer-left-extra">
+        <strong>Shelli K. Spence</strong><br />
+        Reno, NV USA
+      </div>
+    </div>
+
+    <!-- MIDDLE: LEGAL TEXT -->
+    <div class="footer-legal">
+      This website is independent and not affiliated with, endorsed, or sponsored by LinkedIn™
+      or Microsoft Corporation. LinkedIn™ and the LinkedIn logo are trademarks of LinkedIn
+      Corporation and its affiliates.
+    </div>
+
+    <!-- RIGHT: LINKS -->
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/shellikspence/" target="_blank" rel="noopener">LinkedIn™</a>
+      <a href="https://substack.com/@shellikspence?utm_source=user-menu" target="_blank" rel="noopener">Substack</a>
+    </div>
+
+  </div>
+</footer>
+
+
+</div>
+
+<script>
+  // Current year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Simple testimonial slider – 4 second rotation
+  const testimonials = document.querySelectorAll(".testimonial");
+  const dots = document.querySelectorAll(".testimonial-dot");
+  let currentIndex = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((t, i) => {
+      t.classList.toggle("active", i === index);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle("active", i === index);
+    });
+  }
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
+  }, 4000);
+</script>
+</body>
+</html>
