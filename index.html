@@ -593,6 +593,8 @@
     showTestimonial(currentIndex);
   }, 4000);
 </script>
+
+<!-- Success message after form submission -->
 <script>
 // Show success message after form submission
 if (window.location.hash === '#contact' && document.referrer.includes(window.location.hostname)) {
@@ -601,8 +603,9 @@ if (window.location.hash === '#contact' && document.referrer.includes(window.loc
   successMsg.style.cssText = 'background: #E7F58B; color: #004440; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; font-weight: 600;';
   successMsg.innerHTML = '✅ Thank you! Your message has been sent. I\'ll be in touch soon!';
   contactSection.querySelector('h2').after(successMsg);
-  setTimeout(() => successMsg.remove(), 8000); // Remove after 8 seconds
+  setTimeout(() => successMsg.remove(), 8000);
 }
 </script>
+
 </body>
 </html>
