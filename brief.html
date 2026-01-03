@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="e
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Brief – Weekly Newsletter for Executives 50+</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Social preview -->
+  <meta property="og:title" content="The Brief – Weekly Newsletter for Executives 50+">
+  <meta property="og:description" content="Practical brand moves for leaders 50+ to create options for themselves, before they need them.">
+  <meta property="og:image" content="images/landing-photo.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Same CSS as main site -->
+  <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* Landing page specific styles */
+    .landing-page {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #004744 0%, #002b2b 100%);
+      padding: 60px 20px;
+    }
+    
+    .landing-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .landing-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .landing-logo {
+      width: 80px;
+      margin: 0 auto 20px auto;
+    }
+    
+    .landing-logo img {
+      width: 100%;
+      display: block;
+    }
+    
+    .landing-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-bottom: 16px;
+    }
+    
+    .landing-headline {
+      font-family: "Poppins", sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .landing-subheadline {
+      font-size: 22px;
+      color: var(--yellow);
+      margin-bottom: 40px;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .landing-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      margin-bottom: 60px;
+    }
+    
+    .landing-left {
+      color: #ffffff;
+    }
+    
+    .landing-body {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .landing-body p {
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .landing-body strong {
+      color: var(--yellow);
+      font-weight: 600;
+    }
+    
+    .landing-cta-section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(231, 245, 139, 0.3);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .landing-cta-heading {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .landing-photo-wrapper {
+      position: sticky;
+      top: 40px;
+      max-width: 400px;
+    }
+    
+    .landing-photo {
+      background: radial-gradient(circle at top right, #0b8d78 0, #004744 60%, #002b2b 100%);
+      padding: 22px;
+      border-radius: 40px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    .landing-photo-inner {
+      border-radius: 32px;
+      padding: 8px;
+      background: #f3f8c3;
+    }
+    
+    .landing-photo-inner img {
+      border-radius: 28px;
+      width: 100%;
+      display: block;
+    }
+    
+    .landing-photo-caption {
+      text-align: center;
+      margin-top: 20px;
+      color: var(--yellow);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .benefits-section,
+    .topics-section,
+    .bonuses-section {
+      margin-bottom: 40px;
+    }
+    
+    .section-heading {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 16px;
+    }
+    
+    .section-intro {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    
+    .benefit-list,
+    .topic-list,
+    .bonus-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .benefit-list li,
+    .topic-list li,
+    .bonus-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .benefit-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--yellow);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--green-darker);
+      margin-top: 2px;
+      font-size: 14px;
+    }
+    
+    .objections-section {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .objections-heading {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 24px;
+    }
+    
+    .objection-item {
+      margin-bottom: 20px;
+    }
+    
+    .objection-q {
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+    
+    .objection-a {
+      color: #ffffff;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    
+    .author-section {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .author-heading {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 16px;
+    }
+    
+    .author-intro {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    
+    .author-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    
+    .author-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    .promise {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--yellow);
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    .footnote {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 40px;
+      font-style: italic;
+    }
+    
+    .footnote a {
+      color: var(--yellow);
+      text-decoration: underline;
+    }
+    
+    .kit-form-placeholder {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      border: 3px dashed var(--green-mid);
+      margin: 30px 0;
+    }
+    
+    .kit-form-placeholder strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: var(--green-darker);
+    }
+    
+    .kit-form-placeholder p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    
+    .form-privacy {
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 16px;
+    }
+    
+    .back-link {
+      text-align: center;
+      margin-top: 60px;
+    }
+    
+    .back-link a {
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border-bottom: 2px solid var(--yellow);
+      padding-bottom: 2px;
+    }
+    
+    .back-link a:hover {
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 900px) {
+      .landing-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .landing-photo-wrapper {
+        position: static;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .landing-headline {
+        font-size: 36px;
+      }
+      
+      .landing-subheadline {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER / NAV -->
+<header style="background: var(--green-darker); padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+  <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <div style="width: 50px;">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Shelli's Socials logo" style="width: 100%; display: block;">
+        </a>
+      </div>
+      <div>
+        <div style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: var(--yellow);">Shelli's Socials</div>
+        <div style="font-size: 12px; color: var(--yellow);">LinkedIn™ Coaching · Simplified Social Media</div>
+      </div>
+    </div>
+    
+    <nav style="display: flex; gap: 28px; align-items: center;">
+      <a href="index.html#home" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">Home</a>
+      <a href="index.html#message" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Message</a>
+      <a href="index.html#offer" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Offer</a>
+      <a href="index.html#framework" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Framework</a>
+      <a href="index.html#buzz" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Buzz</a>
+      <a href="index.html#why" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Why</a>
+      <a href="index.html#contact" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="landing-page">
+  <div class="landing-container">
+    
+    <!-- Header -->
+    <div class="landing-header">
+      <div class="landing-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Shelli's Socials">
+        </a>
+      </div>
+      
+      <div class="landing-kicker">The Brief</div>
+      
+      <h1 class="landing-headline">
+        Stay in Demand by Staying Visible: One Weekly Brief for Executives 50+
+      </h1>
+      
+      <p class="landing-subheadline">
+        Practical brand moves for leaders 50+ to create options for themselves, before they need them.
+      </p>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="landing-content">
+      
+      <!-- Left Column - Content -->
+      <div class="landing-left">
+        
+        <!-- Opening Body -->
+        <div class="landing-body">
+          <p><strong>The market has shifted.</strong></p>
+          
+          <p>A strong resume and glowing references are no longer enough. Decision-makers increasingly vet leaders through search results and public online signals.</p>
+          
+          <p>At the same time, age bias is rising. A 2025 survey cited by Forbes found that <strong>99% of workers over 40 reported experiencing ageism at work*.</strong></p>
+          
+          <p>Facing these headwinds, senior leaders can't rely on tenure, reputation, or past roles alone to speak for themselves.</p>
+          
+          <p><strong>The good news:</strong> You can take control of your professional future by building a strong digital signal today.</p>
+          
+          <p><strong>It all starts here.</strong></p>
+        </div>
+        
+        <!-- Primary CTA -->
+        <div class="landing-cta-section">
+          <div class="landing-cta-heading">Get the Brief</div>
+          
+          <!-- KIT FORM -->
+          <form action="https://shelli-spence.kit.com/47ae7db31b" method="post" data-sv-form="5835089" data-uid="47ae7db31b" data-format="inline" data-version="5" style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+            <input type="email" name="email_address" placeholder="Enter your email address" required 
+                   style="width: 100%; max-width: 400px; padding: 14px 20px; font-size: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 10px; background: rgba(255,255,255,0.95); color: #004440;">
+            
+            <button type="submit" style="padding: 14px 36px; background: linear-gradient(135deg, #E7F58B, #c8d96d); color: #004440; font-weight: 700; border: none; border-radius: 999px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+              Get the Brief
+            </button>
+          </form>
+          
+          <p class="form-privacy">
+            📧 Weekly only, unsubscribe at any time. Your email address will not be shared.
+          </p>
+        </div>
+        
+        <!-- What You'll Get -->
+        <div class="benefits-section">
+          <h2 class="section-heading">What You'll Get</h2>
+          <p class="section-intro">No fluff. No hype. No "influencer" BS.<br>
+          Every week, Shelli's Executive Brand Brief lands in your inbox with:</p>
+          
+          <ul class="benefit-list">
+            <li>
+              <span class="benefit-icon">✓</span>
+              <span>Search-first tactics so opportunities can find you</span>
+            </li>
+            <li>
+              <span class="benefit-icon">✓</span>
+              <span>Scripts, templates, or tactical steps—ready to use</span>
+            </li>
+            <li>
+              <span class="benefit-icon">✓</span>
+              <span>One brand-building move you can execute in &lt; 30 minutes</span>
+            </li>
+            <li>
+              <span class="benefit-icon">✓</span>
+              <span>Positioning for leaders navigating AI, age bias, and modern vetting</span>
+            </li>
+            <li>
+              <span class="benefit-icon">✓</span>
+              <span>Thoughtful approaches that minimize conflicts of interest with your employer</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Sample Topics -->
+        <div class="topics-section">
+          <h2 class="section-heading">Sample Topics</h2>
+          
+          <ul class="topic-list">
+            <li>
+              <span class="benefit-icon">→</span>
+              <span>LinkedIn updates and best practices</span>
+            </li>
+            <li>
+              <span class="benefit-icon">→</span>
+              <span>Package your expertise so searchers find you</span>
+            </li>
+            <li>
+              <span class="benefit-icon">→</span>
+              <span>Turn your corporate expertise into your own business</span>
+            </li>
+            <li>
+              <span class="benefit-icon">→</span>
+              <span>Start positioning now to be ready for that future pivot</span>
+            </li>
+            <li>
+              <span class="benefit-icon">→</span>
+              <span>Build a brand without violating company social media policy</span>
+            </li>
+            <li>
+              <span class="benefit-icon">→</span>
+              <span>Five reasons LinkedIn is the highest-leverage channel for executives</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Bonuses -->
+        <div class="bonuses-section">
+          <h2 class="section-heading">Bonuses</h2>
+          
+          <ul class="bonus-list">
+            <li>
+              <span class="benefit-icon">🎁</span>
+              <span>Access to the growing Brief Archive (searchable)</span>
+            </li>
+            <li>
+              <span class="benefit-icon">🎁</span>
+              <span>Founding subscribers can reply to shape future Briefs</span>
+            </li>
+            <li>
+              <span class="benefit-icon">🎁</span>
+              <span>Early access to tools: custom GPT's, checklists, free offers</span>
+            </li>
+            <li>
+              <span class="benefit-icon">🎁</span>
+              <span><strong>5-minute LinkedIn Headline Audit (first 100 subscribers only)</strong></span>
+            </li>
+            <li>
+              <span class="benefit-icon">🎁</span>
+              <span>Profile Optimization Checklist, so you can start building your brand today</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Objections -->
+        <div class="objections-section">
+          <h3 class="objections-heading">You Might Be Thinking...</h3>
+          
+          <div class="objection-item">
+            <div class="objection-q">I don't have time:</div>
+            <div class="objection-a">Each Brief includes one simple, actionable move.</div>
+          </div>
+          
+          <div class="objection-item">
+            <div class="objection-q">I'm not a content creator:</div>
+            <div class="objection-a">You don't need to be. This is about leverage and visibility: panels, podcasts, bylines, search-optimized profiles. LinkedIn posting is optional.</div>
+          </div>
+          
+          <div class="objection-item">
+            <div class="objection-q">I hate self-promotion:</div>
+            <div class="objection-a">Service-forward and case-led proof. You're sharing proof and perspective, not bragging.</div>
+          </div>
+          
+          <div class="objection-item">
+            <div class="objection-q">Why now:</div>
+            <div class="objection-a">Hiring, vetting, and opportunity now flow through search and signals. Decision-makers Google you. Boards vet you on LinkedIn. Conferences find speakers through content. If you're not visible with clarity and proof, you're invisible.</div>
+          </div>
+        </div>
+        
+        <!-- Author -->
+        <div class="author-section">
+          <h3 class="author-heading">Who's Writing This?</h3>
+          
+          <p class="author-intro">
+            I'm Shelli: 25+ years in mortgage operations senior leadership, including building my brand while at a tightly regulated federal employer (HUD). I've seen leaders lose visibility they could have compounded with a few focused moves each week. This Brief distills the system I use with executives who want options, invites, and influence.
+          </p>
+          
+          <p class="author-intro">
+            The Brief offers the information I wish I'd had—and what I now use with my clients.
+          </p>
+          
+          <ul class="author-list">
+            <li>
+              <span class="benefit-icon">•</span>
+              <span>I understand reputation stakes from the inside.</span>
+            </li>
+            <li>
+              <span class="benefit-icon">•</span>
+              <span>I'm not writing to the 1B users on LinkedIn: I'm speaking direct to you, the senior professional.</span>
+            </li>
+            <li>
+              <span class="benefit-icon">•</span>
+              <span>Plain executive language; no hype.</span>
+            </li>
+            <li>
+              <span class="benefit-icon">•</span>
+              <span>I don't sell hacks, hype, or manufactured urgency.</span>
+            </li>
+          </ul>
+          
+          <p class="promise">
+            My promise to you:<br>
+            Weekly only. No spam. Unsubscribe anytime.
+          </p>
+        </div>
+        
+        <!-- Footnote -->
+        <div class="footnote">
+          *Workplace Ageism Is Hurting Employees and Businesses Alike (<a href="https://www.forbes.com/sites/carolinecastrillon/2024/03/17/workplace-ageism-is-hurting-employees-and-businesses-alike/" target="_blank" rel="noopener">Forbes</a>)
+        </div>
+        
+        <!-- SECOND CTA -->
+        <div class="landing-cta-section" style="margin-top: 60px;">
+          <div class="landing-cta-heading">Ready to Get Started?</div>
+          
+          <!-- KIT FORM -->
+          <form action="https://shelli-spence.kit.com/47ae7db31b" method="post" data-sv-form="5835089" data-uid="47ae7db31b" data-format="inline" data-version="5" style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+            <input type="email" name="email_address" placeholder="Enter your email address" required 
+                   style="width: 100%; max-width: 400px; padding: 14px 20px; font-size: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 10px; background: rgba(255,255,255,0.95); color: #004440;">
+            
+            <button type="submit" style="padding: 14px 36px; background: linear-gradient(135deg, #E7F58B, #c8d96d); color: #004440; font-weight: 700; border: none; border-radius: 999px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+              Get the Brief
+            </button>
+          </form>
+          
+          <p class="form-privacy">
+            📧 Weekly only, unsubscribe at any time. Your email address will not be shared.
+          </p>
+        </div>
+        
+      </div>
+      
+      <!-- Right Column - Photo -->
+      <div class="landing-photo-wrapper">
+        <div class="landing-photo">
+          <div class="landing-photo-inner">
+            <img src="images/landing-photo.png" alt="Shelli Spence">
+          </div>
+        </div>
+        <div class="landing-photo-caption">
+          Shelli K. Spence<br>
+          LinkedIn™ Strategist for Executives
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Back Link -->
+    <div class="back-link">
+      <a href="index.html">← Back to Shelli's Socials</a>
+    </div>
+    
+  </div>
+</div>
+
+<!-- FOOTER / LEGAL -->
+<footer>
+  <div class="footer-inner">
+
+    <!-- LEFT: COPYRIGHT + LOCATION -->
+    <div class="footer-left">
+      <div class="footer-left-main">
+        © <span id="year"></span> <strong>Shelli's Socials</strong>. All rights reserved.
+      </div>
+      <div class="footer-left-extra">
+        <strong>Shelli K. Spence</strong><br />
+        Reno, NV USA
+      </div>
+    </div>
+
+    <!-- MIDDLE: LEGAL TEXT -->
+    <div class="footer-legal">
+      This website is independent and not affiliated with, endorsed, or sponsored by LinkedIn™
+      or Microsoft Corporation. LinkedIn™ and the LinkedIn logo are trademarks of LinkedIn
+      Corporation and its affiliates.
+    </div>
+
+    <!-- RIGHT: LINKS -->
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/shellikspence/" target="_blank" rel="noopener">LinkedIn™</a>
+      <a href="https://substack.com/@shellikspence?utm_source=user-menu" target="_blank" rel="noopener">Substack</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Current year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
