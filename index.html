@@ -424,7 +424,7 @@
         <p>Fill out the form below and I'll be in touch shortly.</p>
 
         <!-- Netlify Contact Form -->
-        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" action="/#contact">
+        script data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field" action="/#contact">
           <!-- Hidden field for spam protection -->
           <input type="hidden" name="form-name" value="contact" />
           <p style="display: none;">
@@ -592,6 +592,17 @@
     currentIndex = (currentIndex + 1) % testimonials.length;
     showTestimonial(currentIndex);
   }, 4000);
+</script>
+<script>
+// Show success message after form submission
+if (window.location.hash === '#contact' && document.referrer.includes(window.location.hostname)) {
+  const contactSection = document.getElementById('contact');
+  const successMsg = document.createElement('div');
+  successMsg.style.cssText = 'background: #E7F58B; color: #004440; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center; font-weight: 600;';
+  successMsg.innerHTML = '✅ Thank you! Your message has been sent. I\'ll be in touch soon!';
+  contactSection.querySelector('h2').after(successMsg);
+  setTimeout(() => successMsg.remove(), 8000); // Remove after 8 seconds
+}
 </script>
 </body>
 </html>
