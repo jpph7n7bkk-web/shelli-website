@@ -365,13 +365,34 @@
         font-size: 18px;
       }
     }
-  </style>
+  
+/* Mobile nav wrap */
+@media (max-width: 768px) {
+  #site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 0 20px !important;
+  }
+  #site-nav {
+    flex-wrap: wrap;
+    gap: 14px !important;
+    justify-content: flex-start;
+  }
+  #site-nav a {
+    font-size: 14px !important;
+    line-height: 1.2;
+  }
+}
+
+</style>
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 </head>
 <body>
 
 <!-- HEADER / NAV -->
 <header style="background: var(--green-darker); padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-  <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center;">
+  <div id="site-header-inner" style="max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center;">
     <div style="display: flex; align-items: center; gap: 16px;">
       <div style="width: 50px;">
         <a href="index.html">
@@ -384,7 +405,7 @@
       </div>
     </div>
     
-    <nav style="display: flex; gap: 28px; align-items: center;">
+    <nav id="site-nav" style="display: flex; gap: 28px; align-items: center;">
       <a href="index.html#home" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">Home</a>
       <a href="index.html#message" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Message</a>
       <a href="index.html#offer" style="color: var(--yellow); text-decoration: none; font-weight: 500; font-size: 15px;">The Offer</a>
@@ -444,10 +465,11 @@
           <div class="landing-cta-heading">Get the Brief</div>
           
           <!-- KIT FORM -->
-<script async
-  data-uid="47ae7db31b"
-  src="https://shelli-spence.kit.com/47ae7db31b/index.js">
-</script>
+<form action="https://app.kit.com/forms/8933833/subscriptions" method="post" data-sv-form="8933833" data-uid="47ae7db31b" data-format="inline" data-version="5" style="display:flex; flex-direction: column; align-items:center; gap:16px;">
+  <input type="email" name="email_address" placeholder="Enter your email address" required style="width: 100%; max-width: 400px; padding: 14px 20px; font-size: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 10px; background: rgba(255,255,255,0.95); color: #004440;">
+  <button type="submit" style="padding: 14px 36px; background: linear-gradient(135deg, #E7F58B, #c8d96d); color: #004440; font-weight: 700; border: none; border-radius: 999px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.15s ease;">Get the Brief</button>
+</form>
+
           
           <p class="form-privacy">
             📧 Weekly only, unsubscribe at any time. Your email address will not be shared.
@@ -616,14 +638,10 @@
           <div class="landing-cta-heading">Ready to Get Started?</div>
           
           <!-- KIT FORM -->
-          <form action="https://shelli-spence.kit.com/47ae7db31b" method="post" data-sv-form="5835089" data-uid="47ae7db31b" data-format="inline" data-version="5" style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
-            <input type="email" name="email_address" placeholder="Enter your email address" required 
-                   style="width: 100%; max-width: 400px; padding: 14px 20px; font-size: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 10px; background: rgba(255,255,255,0.95); color: #004440;">
-            
-            <button type="submit" style="padding: 14px 36px; background: linear-gradient(135deg, #E7F58B, #c8d96d); color: #004440; font-weight: 700; border: none; border-radius: 999px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease;">
-              Get the Brief
-            </button>
-          </form>
+<form action="https://app.kit.com/forms/8933833/subscriptions" method="post" data-sv-form="8933833" data-uid="47ae7db31b" data-format="inline" data-version="5" style="display:flex; flex-direction: column; align-items:center; gap:16px;">
+  <input type="email" name="email_address" placeholder="Enter your email address" required style="width: 100%; max-width: 400px; padding: 14px 20px; font-size: 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 10px; background: rgba(255,255,255,0.95); color: #004440;">
+  <button type="submit" style="padding: 14px 36px; background: linear-gradient(135deg, #E7F58B, #c8d96d); color: #004440; font-weight: 700; border: none; border-radius: 999px; cursor: pointer; font-size: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.15s ease;">Get the Brief</button>
+</form>
           
           <p class="form-privacy">
             📧 Weekly only, unsubscribe at any time. Your email address will not be shared.
