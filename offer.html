@@ -28,6 +28,12 @@
     .footer-left-extra {
       color: #e7f58b !important;
     }
+    
+    /* Hover effect for clickable 1:1 Intensive card */
+    .pricing-card-link:hover .pricing-card {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 50px rgba(0, 0, 0, 0.18) !important;
+    }
   </style>
 </head>
 <body>
@@ -70,20 +76,22 @@
       <div class="pricing-grid">
         
         <!-- Platinum 1:1 -->
-        <article class="pricing-card">
-          <div>
-            <div class="pricing-label">Platinum 1:1</div>
-            <h3 class="pricing-title">1:1 Strategy Intensive</h3>
-            <p class="muted">One 60-minute working session on Zoom</p>
-            <ul class="pricing-list">
-              <li>A focused, one hour private session.</li>
-              <li>You can set the agenda, or I lead with a tailored plan.</li>
-              <li>Full diagnostic review of your current positioning (optional).</li>
-              <li>Retainer packages with preferred pricing and DM support available.</li>
-            </ul>
-          </div>
-          <div class="pricing-price">*$600</div>
-        </article>
+        <a href="intensive.html" class="pricing-card-link" style="text-decoration: none; color: inherit; display: block;">
+          <article class="pricing-card" style="cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+            <div>
+              <div class="pricing-label">Platinum 1:1</div>
+              <h3 class="pricing-title">1:1 Strategy Intensive</h3>
+              <p class="muted">One 60-minute working session on Zoom</p>
+              <ul class="pricing-list">
+                <li>A focused, one hour private session.</li>
+                <li>You can set the agenda, or I lead with a tailored plan.</li>
+                <li>Full diagnostic review of your current positioning (optional).</li>
+                <li>Retainer packages with preferred pricing and DM support available.</li>
+              </ul>
+            </div>
+            <div class="pricing-price">*$600</div>
+          </article>
+        </a>
 
         <!-- Group Cohort -->
         <article class="pricing-card">
