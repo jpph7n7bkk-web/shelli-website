@@ -403,8 +403,38 @@
         <p class="section-lede">Whether you’re positioning for your next role, laying the groundwork to go out on your own, or growing your business, the work starts now. Seats are confirmed in the order enrollment is completed.</p>
       </div>
       <div class="form-card">
-        <!-- Dubsado inquiry form -->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"></script><iframe src="https://hello.dubsado.com/public/form/view/6a4e9a9081192fabf48e5610?iframe=true" frameBorder="0" width="100%" height="750" title="Inquiry form"></iframe><script type="text/javascript">setTimeout(function(){iFrameResize({checkOrigin: false});},30);</script>
+        <form class="site-form" name="cohort-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/executive-edge?success=true#reserve">
+          <input type="hidden" name="form-name" value="cohort-inquiry" />
+          <p style="display:none;"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+          <div class="form-row">
+            <div>
+              <label for="firstname">First Name *</label>
+              <input type="text" id="firstname" name="firstname" required autocomplete="given-name" />
+            </div>
+            <div>
+              <label for="lastname">Last Name *</label>
+              <input type="text" id="lastname" name="lastname" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+          </div>
+          <div>
+            <label for="linkedin">LinkedIn™ Profile URL (optional)</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/yourname" />
+          </div>
+          <div>
+            <label for="message">Anything you want me to know? (optional)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <div><button type="submit" class="btn btn-dark btn-lg">Reserve My Seat</button></div>
+          <p class="muted mb-0" style="font-size:13.5px;">I’ll reply personally with the enrollment agreement. No spam, ever.</p>
+        </form>
       </div>
       <div class="socials mt-24" style="justify-content:center;">
         <a href="https://www.linkedin.com/in/shellikspence/" target="_blank" rel="noopener" class="icon" aria-label="LinkedIn">
@@ -463,5 +493,19 @@
 
 </div>
 <script src="site.js"></script>
+<script>
+  // Thank-you message after the inquiry form submits
+  (function () {
+    if (window.location.search.indexOf("success") === -1) return;
+    var card = document.querySelector("#reserve .form-card");
+    if (!card) return;
+    var form = card.querySelector("form");
+    var msg = document.createElement("div");
+    msg.style.cssText = "background:#e7f58b;color:#004440;padding:22px;border-radius:14px;text-align:center;font-weight:700;font-size:17px;";
+    msg.innerHTML = "✅ Got it! Your seat request is in.<br><span style=\"font-weight:400;font-size:15px;\">I’ll be in touch shortly with the enrollment agreement.</span>";
+    card.insertBefore(msg, card.firstChild);
+    if (form) form.style.display = "none";
+  })();
+</script>
 </body>
 </html>
