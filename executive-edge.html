@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Executive Edge for LinkedIn™ | Shelli on Social</title>
+  <meta name="description" content="An 8-week live LinkedIn™ program for executives and leaders. Six seats per group. Tuesdays at 10:00 AM Pacific, starting October 27." />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta property="og:title" content="The Executive Edge for LinkedIn™">
+  <meta property="og:description" content="An 8-week live LinkedIn™ program: six professionals per group, building the network that puts them in front of the right people.">
+  <meta property="og:image" content="https://shellionsocial.com/images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shellionsocial.com/executive-edge.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .bignum { font-family: var(--font-head); font-size: clamp(96px, 14vw, 160px); font-weight: 700; line-height: 0.9; color: var(--yellow); letter-spacing: -0.05em; text-align: center; }
+    .bignum span { display: block; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 14px; font-weight: 600; }
+    .band-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; align-items: center; max-width: 920px; margin: 0 auto; }
+    .band-grid p { font-size: 18px; }
+    @media (max-width: 760px) { .band-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; text-align: center; } .six-seats { grid-template-columns: minmax(0, 1fr) !important; text-align: center; } }
+
+    /* Featured quote (Jasmin) */
+    .feature-quote { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 64px); align-items: center; background: #fff; border: 1px solid var(--line); border-radius: var(--radius-xl); padding: clamp(24px, 4vw, 44px); box-shadow: var(--card-shadow); }
+    .feature-quote-photo { position: relative; }
+    .feature-quote-photo::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border-radius: var(--radius-lg); background: var(--yellow); z-index: 0; transform: rotate(-2deg); }
+    .feature-quote-photo img { position: relative; z-index: 1; border-radius: var(--radius-lg); width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+    .feature-quote blockquote { font-family: var(--font-head); font-weight: 700; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.02em; color: var(--green-darker); margin-bottom: 22px; }
+    .feature-quote blockquote span { color: var(--green-mid); }
+    .feature-quote .who { display: flex; align-items: center; gap: 14px; }
+    .feature-quote .who img { width: 52px; height: 52px; border-radius: 999px; object-fit: cover; }
+    .feature-quote .who strong { display: block; font-family: var(--font-head); font-size: 16px; }
+    .feature-quote .who span { font-size: 14px; color: var(--text-muted); }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: var(--green-light); color: var(--green-darker); border: 1px solid #cfe4dc; border-radius: 999px; padding: 8px 14px; font-family: var(--font-head); font-size: 13px; font-weight: 600; }
+    .badge .star { color: #f2b705; }
+    @media (max-width: 860px) { .feature-quote { grid-template-columns: minmax(0, 1fr); } .feature-quote-photo { max-width: 380px; margin: 0 auto 10px; } }
+
+    .testi-who img { width: 44px; height: 44px; border-radius: 999px; object-fit: cover; flex-shrink: 0; }
+    .testi-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 22px; }
+    @media (max-width: 900px) { .testi-3 { grid-template-columns: minmax(0, 1fr); } }
+
+    .sticky-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: rgba(0,60,58,0.96); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.1); padding: 10px 18px; display: none; align-items: center; justify-content: space-between; gap: 12px; color: #fff; font-size: 14px; }
+    .sticky-cta strong { font-family: var(--font-head); }
+    @media (max-width: 640px) { .sticky-cta { display: flex; } body { padding-bottom: 66px; } }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-wrapper">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Shelli on Social home">
+        <img src="images/logo.png" alt="Shelli on Social logo" width="44" height="44" />
+        <span>
+          <span class="nav-brand-name">Shelli on Social</span>
+          <span class="nav-brand-sub">LinkedIn™ Coaching · Simplified Social Media</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#who">Who it’s for</a>
+        <a href="#proof">The Results</a>
+        <a href="#framework">The Framework</a>
+        <a href="#details">The Program</a>
+        <a href="#investment">The Investment</a>
+        <a href="#faq">FAQ</a>
+        <a href="#reserve" class="nav-cta">Reserve Your Seat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- 1. HERO -->
+  <section id="top" class="hero bg-gradient">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow">Powered by the Optimize · Attract · Convert framework</div>
+        <h1 class="hero-title">The Executive Edge for <span class="highlight">LinkedIn™</span></h1>
+        <p class="hero-lede" style="font-family:var(--font-head); font-weight:600; color:#fff; font-size:clamp(19px,2vw,24px); margin-bottom:18px;">
+          Start attracting more opportunity by building your options now.
+        </p>
+        <p class="hero-lede">
+          An 8-week live LinkedIn™ program: six professionals per group, building the network that puts them in front of the right people and draws opportunity to them.
+        </p>
+        <div class="facts">
+          <span class="fact solid">Starts October 27</span>
+          <span class="fact">8 live sessions</span>
+          <span class="fact">6 seats only</span>
+          <span class="fact">Live on Zoom</span>
+          <span class="fact">One hour 1:1 session included</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#reserve" class="btn btn-yellow btn-lg">Reserve Your Seat</a>
+          <a href="#details" class="btn btn-outline-light btn-lg">See the program</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="images/landing-photo.jpg" alt="Shelli K. Spence, LinkedIn™ coach" width="440" height="550" />
+        <div class="hero-badge">
+          <span class="dot">6</span>
+          <span><strong>Seats per cohort</strong>Confirmed in order of enrollment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. THE PROBLEM -->
+  <section id="problem" class="section bg-white">
+    <div class="container-narrow">
+      <div class="section-eyebrow">The Problem</div>
+      <h2 class="section-title">You already see it coming.</h2>
+      <p>
+        Maybe you’re seeing worrisome patterns at the office. The writing is on the wall, but you aren’t sure how to interpret it.
+      </p>
+      <p>
+        Maybe you’ve already been impacted. You’re rebounding, looking for your next gig.
+      </p>
+      <p>
+        Or maybe you’re in a stable position, and you truly love it. You just want the right opportunity to be able to find you when it comes along. The more opportunity, the better.
+      </p>
+      <div class="pull reveal">
+        <p>Different starting points, same reality: <strong>your resume is proof of your past. Your brand attracts your options for the future.</strong></p>
+      </div>
+      <p>That is what we build here. Not posting to go viral.</p>
+      <p>A structured system, just like you’ve built countless times in your leadership roles. Taught in the sequence that produces results, making your everyday LinkedIn™ presence work for you.</p>
+    </div>
+  </section>
+
+  <!-- 3. WHO THIS IS FOR -->
+  <section id="who" class="section bg-light">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-eyebrow">Who This Is For</div>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal">
+          <div class="card-icon">01</div>
+          <h3>Executives preparing for a job change</h3>
+          <p>Whether you’re actively looking now or positioning yourself for the right opportunity down the road.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">02</div>
+          <h3>Leaders positioning for a broader horizon</h3>
+          <p>You want a wider field of view, and better opportunities.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">03</div>
+          <h3>Future founders and consultants</h3>
+          <p>You plan to do your own thing one day. Your network and reputation are the launchpad. And you can build while still employed.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">04</div>
+          <h3>Business owners</h3>
+          <p>You want a steady flow of inbound interest and leads instead of cold outreach.</p>
+        </div>
+      </div>
+      <p class="statement-sub mt-48 reveal" style="font-weight:600; color:var(--green-dark); max-width:760px;">
+        Different goals, same engine: the people who get opportunities on LinkedIn™ are visible, credible, and connected before the moment they need to be.
+      </p>
+    </div>
+  </section>
+
+  <!-- 6. PROOF -->
+  <section id="proof" class="section bg-green-light">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-eyebrow">The Results</div>
+        <h2 class="section-title">Don’t take my word for it.</h2>
+      </div>
+
+      <div class="feature-quote reveal">
+        <div class="feature-quote-photo">
+          <img src="images/people/jasmin-and-shelli.jpg" alt="Shelli Spence with Jasmin Alić" width="440" height="550" />
+        </div>
+        <div>
+          <blockquote>“This lady gets it. <span>She really does.</span>”</blockquote>
+          <div class="who">
+            <img src="images/people/jasmin-alic.jpg" alt="Jasmin Alić" width="52" height="52" />
+            <div>
+              <strong>Jasmin Alić</strong>
+              <span>Brand &amp; Business Strategist · Founder and CEO, Link Up</span>
+            </div>
+          </div>
+          <div class="badge-row">
+            <span class="badge"><span class="star">★</span> #1 LinkedIn™ creator in the world</span>
+            <span class="badge"><span class="star">★</span> Featured in Forbes, thefutur, Bloomberg, and the Financial Times</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-3">
+        <figure class="testi reveal" style="margin-bottom:0;">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Within weeks of starting Shelli’s cohort, my profile views went up <mark>over 500%</mark>. And it wasn’t random traffic. It was the mortgage industry people I wanted to be seen by. She doesn’t just teach you to post more. She teaches you to be found by the right people! Highly recommend!”</blockquote>
+          <figcaption class="testi-who"><img src="images/people/amy-rios.jpg" alt="Amy Rios" width="44" height="44" /><span><div class="testi-name">Amy Rios</div><div class="testi-role">Vice President, Mortgage Operations</div></span></figcaption>
+        </figure>
+        <figure class="testi reveal" style="margin-bottom:0;">
+          <div class="stars">★★★★★</div>
+          <blockquote>“As an HR Executive with over 20 years of experience, I never considered myself a “content person” — the idea of putting myself out there on LinkedIn felt daunting. Shelli’s framework changed that. Shelli started with my profile, not with posting, and that foundation made everything else click. From there, she helped me build the confidence to post consistently, and <mark>my followers and impressions grew as a result</mark>. More than tactics, Shelli gave me the big picture and a process that actually fit who I am. A great program taught by a great leader! Thank you Shelli!”</blockquote>
+          <figcaption class="testi-who"><img src="images/people/sara-cramlet.jpg" alt="Sara Cramlet" width="44" height="44" /><span><div class="testi-name">Sara Cramlet, SPHR</div><div class="testi-role">Senior HR Executive</div></span></figcaption>
+        </figure>
+        <figure class="testi reveal" style="margin-bottom:0;">
+          <div class="stars">★★★★★</div>
+          <blockquote>“I walked away with <mark>practical tools, clear direction, and a lot more confidence</mark> in how I show up online. Highly recommend her to anyone looking to elevate their LinkedIn presence.”</blockquote>
+          <figcaption class="testi-who"><img src="images/people/laura-faro.jpg" alt="Laura Faro" width="44" height="44" /><span><div class="testi-name">Laura Faro</div><div class="testi-role">Leadership Trainer &amp; Workshop Facilitator</div></span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. WHY LEARN FROM ME -->
+  <section id="why" class="section bg-white">
+    <div class="container split">
+      <div class="split-photo reveal">
+        <img src="images/why-photo.jpg" alt="Shelli Spence" width="460" height="575" />
+      </div>
+      <div class="split-copy">
+        <div class="section-eyebrow">Why Learn From Me</div>
+        <h2 class="section-title">I speak corporate, because that’s where I come from.</h2>
+        <p>I’m not a marketing bro. I’m a former operations executive who spent a career translating high-stakes complexity into systems people can run, and training teams to run them. Corporate is where I come from, and that’s who I write for.</p>
+        <p>I practice everything I teach. My own profile, content, and network are the engine that built this business:</p>
+        <ul class="check-list left mt-24">
+          <li><span class="ico ok">✓</span>Recognized by Forbes.</li>
+          <li><span class="ico ok">✓</span>Ranked among the top 30 US LinkedIn creators nationally in personal branding and thought leadership by Favikon.</li>
+          <li><span class="ico ok">✓</span>My impressions quadrupled in a matter of months using the exact system taught in this cohort.</li>
+          <li><span class="ico ok">✓</span>I invest in ongoing algorithm research and run my own multi-month experiments. You’re working with how LinkedIn™ distributes content today, not how it worked two years ago.</li>
+        </ul>
+        <figure class="reveal" style="max-width:340px; margin:26px 0 0;">
+          <img src="images/favikon-ranking.png" alt="Favikon ranking card: Shelli K. Spence, #29, February 21, 2026" width="340" height="246" style="border-radius:16px; box-shadow:var(--card-shadow);" />
+          <figcaption class="muted" style="font-size:13.5px; margin-top:10px;">Favikon ranking, February 2026: #29 among US LinkedIn™ creators in personal branding.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. THE FRAMEWORK -->
+  <section id="framework" class="section bg-green-light">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-eyebrow">The Framework</div>
+        <h2 class="section-title">Taught in the sequence that produces results.</h2>
+        <p class="section-lede">Because attention pointed at an unoptimized profile is wasted attention.</p>
+      </div>
+      <div class="arrowline">OPTIMIZE <span>→</span> ATTRACT <span>→</span> CONVERT</div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>Optimize <span>Your profile</span></h3>
+          <p>Starting with your personal brand as the strategic foundation, then translating it into a profile engineered for conversion.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h3>Attract <span>The right audience</span></h3>
+          <p>Through intentional content and engagement that puts you in front of the people who matter.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h3>Convert <span>Attention into doors</span></h3>
+          <p>That attention becomes conversations that open doors: booked calls, interviews, and referrals.</p>
+        </div>
+      </div>
+      <div class="callout reveal">
+        <p>And here is the edge itself: only about <strong>1% of LinkedIn™ members post consistently</strong>. Show up with the right system and you are ahead of 99% of your competition for your next role before a single person reads your post.</p>
+        <p><strong>With consistent execution, you can start receiving inbound interest within 30 days.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PROGRAM DETAILS -->
+  <section id="details" class="section bg-white">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-eyebrow">The Program</div>
+        <h2 class="section-title">Eight weeks. Done before the holidays.</h2>
+      </div>
+      <div class="grid-2">
+        <div class="panel reveal">
+          <h3>Your session dates, Tuesdays at 10:00 AM, Pacific time.</h3>
+          <ul class="dates">
+            <li><span class="sess">Session 1</span><span class="date">October 27</span></li>
+            <li><span class="sess">Session 2</span><span class="date">November 3</span></li>
+            <li><span class="sess">Session 3</span><span class="date">November 10</span></li>
+            <li><span class="sess">Session 4</span><span class="date">November 17</span></li>
+            <li><span class="sess">Session 5</span><span class="date">November 24</span></li>
+            <li><span class="sess">Session 6</span><span class="date">December 1</span></li>
+            <li><span class="sess">Session 7</span><span class="date">December 8</span></li>
+            <li><span class="sess">Session 8</span><span class="date">December 15</span></li>
+          </ul>
+          <p class="muted mt-16 mb-0" style="font-size:14.5px;">8 weekly live sessions, 60 to 75 minutes each, on Zoom.</p>
+        </div>
+        <div class="panel reveal">
+          <h3>What’s included</h3>
+          <ul class="check-list left plain">
+            <li><span class="ico ok">✓</span>Six participants maximum. Real interaction, live feedback, and accountability every week.</li>
+            <li><span class="ico ok">✓</span>One private 1:1 with me, applied wherever you need it most.</li>
+            <li><span class="ico ok">✓</span>Every session recorded. Miss a week, and the recording is your make-up. Access continues for 3 months after the program ends.</li>
+            <li><span class="ico ok">✓</span>Program materials: templates, frameworks, and worksheets, including the CAPS commenting framework.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SIX SEATS (folded in from its own section) -->
+      <div class="reveal six-seats" style="margin-top:22px; background:var(--green-darkest); color:#fff; border-radius:var(--radius-lg); padding:clamp(26px,4vw,40px); display:grid; grid-template-columns:150px minmax(0,1fr); gap:32px; align-items:center;">
+        <div class="bignum" style="font-size:clamp(84px,10vw,120px);">6<span>Seats per cohort</span></div>
+        <div>
+          <div class="section-eyebrow" style="background:rgba(231,245,139,0.14); color:var(--yellow); border-color:rgba(231,245,139,0.35); margin-bottom:12px;">Small By Design</div>
+          <h3 style="color:#fff; font-size:24px; margin-bottom:10px;">Six seats. That number is the product.</h3>
+          <p style="color:rgba(255,255,255,0.88); margin-bottom:10px;">A group small enough that I know your business, your goals, and your profile personally. This isn’t 50 people on a Zoom call where I present the “Shelli Show.”</p>
+          <p style="color:rgba(255,255,255,0.88); margin-bottom:0;">Every session includes real interaction, live feedback, and accountability. You get my attention in real time.</p>
+        </div>
+      </div>
+
+      <!-- THE COMMITMENT -->
+      <div class="panel-outline mt-48 reveal" style="max-width:820px; margin-left:auto; margin-right:auto;">
+        <div class="section-eyebrow">The Commitment</div>
+        <h3 style="font-size:24px; margin-bottom:12px;">This program works if you work it.</h3>
+        <p>Plan on a minimum of three hours per week on the platform outside our sessions: posting, commenting, and connecting.</p>
+        <p class="mb-0">The participants who put in the reps are the ones who see inbound results. If this season is too full for that, a future cohort will serve you better.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. INVESTMENT -->
+  <section id="investment" class="section bg-light">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-eyebrow">The Investment</div>
+        <h2 class="section-title">Two ways to enroll.</h2>
+      </div>
+      <div class="grid-2" style="max-width:880px; margin:0 auto;">
+        <article class="card price-card featured reveal">
+          <span class="price-tag">Best value</span>
+          <div class="price-label">Option One</div>
+          <h3>Pay in full</h3>
+          <p class="price-sub">One payment, seat confirmed, nothing else to think about.</p>
+          <div class="price-amount">$2,500</div>
+          <a href="#reserve" class="btn btn-yellow">Reserve your seat</a>
+        </article>
+        <article class="card price-card reveal">
+          <div class="price-label">Option Two</div>
+          <h3>Two-payment plan</h3>
+          <p class="price-sub">First payment reserves your seat. Balance due before Session 4.</p>
+          <div class="price-amount">2 × $1,312.50</div>
+          <div class="price-note">$2,625 total (base plus 5%)</div>
+          <a href="#reserve" class="btn btn-outline-dark">Reserve your seat</a>
+        </article>
+      </div>
+      <p class="price-footnote" style="max-width:760px; margin-left:auto; margin-right:auto;">
+        Your seat is confirmed once your signed enrollment agreement and first payment are received. Full refund available 14 or more days before Session 1. Complete terms are in the enrollment agreement.
+      </p>
+    </div>
+  </section>
+
+  <!-- 10. FAQ -->
+  <section id="faq" class="section bg-white">
+    <div class="container">
+      <div class="section-head center">
+        <div class="section-eyebrow">FAQ</div>
+        <h2 class="section-title">Questions people ask before they enroll.</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>What if I miss a session?</summary>
+          <p>Every session is recorded and shared with the cohort. The recording is your make-up. Live sessions are not rescheduled for individual participants.</p>
+        </details>
+        <details>
+          <summary>I’m employed and not looking to sell anything. Is this still for me?</summary>
+          <p>Yes. The same engine that brings a business owner leads brings an employed professional visibility with hiring managers, recruiters, and peers, so opportunity finds you before you need it.</p>
+        </details>
+        <details>
+          <summary>What if I don’t know what I want to do yet?</summary>
+          <p>That is the beauty of building a LinkedIn brand. You can start positioning yourself without locking in an offer. And even if you do? You’ll know how to pivot your activity to focus on your new goals.</p>
+        </details>
+        <details>
+          <summary>How much time does this take?</summary>
+          <p>Plan on the weekly session plus a minimum of three hours on the platform. This is a program for people ready to do the work.</p>
+        </details>
+        <details>
+          <summary>When do I book my 1:1?</summary>
+          <p>Any time after your program fee is paid in full, to occur before the seventh group session. Book it early so we can apply it where it helps you most.</p>
+        </details>
+        <details>
+          <summary>What happens after I reserve?</summary>
+          <p>Fill out the inquiry form and I’ll send you the enrollment agreement. Once it’s signed, you’ll receive your payment link, and your seat is locked.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. RESERVE -->
+  <section id="reserve" class="section bg-gradient">
+    <div class="container" style="max-width:900px;">
+      <div class="section-head center">
+        <div class="section-eyebrow">Reserve Your Seat</div>
+        <h2 class="section-title">Six seats. The Executive Edge for LinkedIn™ starts October 27.</h2>
+        <p class="section-lede">Whether you’re positioning for your next role, laying the groundwork to go out on your own, or growing your business, the work starts now. Seats are confirmed in the order enrollment is completed.</p>
+      </div>
+      <div class="form-card">
+        <!-- Dubsado inquiry form -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"></script><iframe src="https://hello.dubsado.com/public/form/view/6a4e9a9081192fabf48e5610?iframe=true" frameBorder="0" width="100%" height="750" title="Inquiry form"></iframe><script type="text/javascript">setTimeout(function(){iFrameResize({checkOrigin: false});},30);</script>
+      </div>
+      <div class="socials mt-24" style="justify-content:center;">
+        <a href="https://www.linkedin.com/in/shellikspence/" target="_blank" rel="noopener" class="icon" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8 8.5h3.8v1.98h.05c.53-.95 1.83-1.98 3.77-1.98 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.47c0-1.54-.03-3.52-2.15-3.52-2.15 0-2.48 1.68-2.48 3.41V23H8V8.5z" fill="currentColor"/></svg>
+        </a>
+        <a href="https://substack.com/@shellikspence?utm_source=user-menu" target="_blank" rel="noopener" class="icon" aria-label="Substack">
+          <svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="5" width="18" height="3" rx="1" fill="currentColor"/><rect x="3" y="10" width="18" height="3" rx="1" fill="currentColor"/><rect x="7" y="15" width="10" height="6" rx="1" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="" width="40" height="40" />
+            <span><strong>Shelli on Social</strong><small>LinkedIn™ Coaching · Simplified Social Media</small></span>
+          </div>
+          <p>Shelli K. Spence · Reno, NV USA</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="intensive.html">1:1 Strategy Intensive</a>
+            <a href="offer.html">All coaching options</a>
+            <a href="https://substack.com/@shellikspence?utm_source=user-menu" target="_blank" rel="noopener">My writing on Substack</a>
+            <a href="resources/resources.html">Resources</a>
+          </div>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/shellikspence/" target="_blank" rel="noopener">LinkedIn™</a>
+            <a href="https://substack.com/@shellikspence?utm_source=user-menu" target="_blank" rel="noopener">Substack</a>
+            <a href="contact.html">Contact</a>
+            <a href="biography.html">About Shelli</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© <span data-year></span> Shelli on Social. All rights reserved. This website is independent and not affiliated with, endorsed, or sponsored by LinkedIn™ or Microsoft Corporation. LinkedIn™ and the LinkedIn logo are trademarks of LinkedIn Corporation and its affiliates.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <span><strong>6 seats.</strong> Starts Oct 27.</span>
+    <a href="#reserve" class="btn btn-yellow btn-sm">Reserve Your Seat</a>
+  </div>
+
+</div>
+<script src="site.js"></script>
+</body>
+</html>
