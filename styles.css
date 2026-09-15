@@ -464,3 +464,8 @@ html.js .reveal.in, html.js.revealed .reveal { opacity: 1; transform: none; }
 
 /* Two-tier hero headline */
 .hero-sub-line { display: block; font-size: 0.6em; font-weight: 600; line-height: 1.15; margin-top: 14px; letter-spacing: -0.01em; }
+
+/* Clickable hero badge */
+.hero-badge-link { max-width: 270px; transition: transform var(--ease), box-shadow var(--ease); }
+.hero-badge-link:hover { transform: translateY(-3px); box-shadow: 0 22px 44px rgba(0,0,0,0.34); }
+.hero-badge-link span:last-child { white-space: nowrap; }
